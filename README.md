@@ -95,4 +95,4 @@ Descripción: Variados
 
 - Descargar **Visual Studio Code** y abrir este repositorio como carpeta de proyecto.
 - Utilizar Java JDK 17 o superior.
-- Iniciar el proyecto desde el archivo Main.java
+- Iniciar el proyecto desde el archivo App.java
