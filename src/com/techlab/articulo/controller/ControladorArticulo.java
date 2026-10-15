@@ -36,9 +36,7 @@ public class ControladorArticulo {
         while(!ingresoDeDato.equalsIgnoreCase("1") 
                 && !ingresoDeDato.equalsIgnoreCase("2")
                     && !ingresoDeDato.equalsIgnoreCase("3")){
-            System.out.print("""
-                    **ERROR** Debe ingresar las opciones '1', '2' o '3', reingrese: 
-                    """);
+            System.out.print("**ERROR** Debe ingresar las opciones '1', '2' o '3', reingrese: ");
             ingresoDeDato = scanner.nextLine();
         }
 
@@ -500,7 +498,8 @@ public class ControladorArticulo {
                         ((ArticuloAlimenticio)articulo).getDiasParaVencimiento(), (int)nuevosDiasVencimiento))
                         .append(System.lineSeparator());
         }
-        sB.append(String.format("""
+        if (articulo instanceof ArticuloGenerico){
+            sB.append(String.format("""
 
                     Tipo de artículo: %s
 
@@ -515,7 +514,7 @@ public class ControladorArticulo {
                         articulo.getCategoria().getNombre(), nuevaCategoria.getNombre(),
                         ((ArticuloGenerico)articulo).getPeso(), nuevoPeso))
                         .append(System.lineSeparator());
-        // Asumo que es ArticuloGenérico
+        }
         sB.append("¿Confirma la modificación del artículo? Escriba 'si' o 'no': ");
         return sB.toString();
     }

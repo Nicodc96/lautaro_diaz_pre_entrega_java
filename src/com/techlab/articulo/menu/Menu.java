@@ -38,7 +38,7 @@ public class Menu {
             }
             return opcionSeleccionada;
         } catch(InputMismatchException e){
-            System.out.println("**ERROR**, ¡Se debe ingresar un número como opción!");
+            System.out.println("**ERROR**, ¡Se debe ingresar un número como opción! Vuelva a intentar.");
             return -1;
         }
     }

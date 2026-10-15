@@ -34,7 +34,7 @@ public class Categoria {
     }
 
     public void setDescripcion(String nuevaDescripcion){
-        if (Objects.isNull(nuevaDescripcion) || nuevaDescripcion.length() < 0){
+        if (Objects.isNull(nuevaDescripcion) || nuevaDescripcion.length() <= 0){
             return;
         }
         this.descripcion = nuevaDescripcion;

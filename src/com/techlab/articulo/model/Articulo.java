@@ -78,7 +78,7 @@ public abstract class Articulo {
     @Override
     public boolean equals(Object obj){
         if (this == obj) return true;
-        if (Objects.isNull(obj) || obj.getClass() != this.getClass()) return false;
+        if (obj == null || obj.getClass() != this.getClass()) return false;
         
         Articulo articuloAComparar = (Articulo) obj;
         return this.getCodigo() == articuloAComparar.getCodigo();

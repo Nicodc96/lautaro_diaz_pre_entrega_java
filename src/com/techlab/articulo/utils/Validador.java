@@ -51,7 +51,7 @@ public class Validador {
         - El texto ingresado puede tener números, espacios, letras y acentos españoles.
         - El texto ingresado NO pueda tener sólo números
         - El texto ingresado debe respetar un mínimo y un máximo de longitud
-        - Acepta los siguientes caracteres especiales: . , : ; "
+        - Acepta los siguientes caracteres especiales: . , : ; -"
      * @param strAValidar - referencia al String a validar
      * @param minimo - mínimo de caracteres que debe tener la cadena de texto
      * @param maximo - máximo de caracteres que debe tener la cadena de texto
@@ -59,7 +59,7 @@ public class Validador {
      */
     private static boolean validar(String strAValidar, int minimo, int maximo) {
         if (!strAValidar.matches("^(?=.*[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ])[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ0-9 .:,\";-]+$"))
-            return false; // El string acepta números, letras, espacios y acentos, pero debe contener al menos una letra.
+            return false;
         if (strAValidar.length() < minimo || strAValidar.length() > maximo)
             return false;
         return true;
